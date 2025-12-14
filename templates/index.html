@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRC Proteomics</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="hero-content">
+
+        <h1>
+            PROTEOMICS-BASED CRC<br>
+            DETECTION / PREDICTION
+        </h1>
+
+        <div class="container">
+            <form method="POST" enctype="multipart/form-data" style="text-align:center;">
+
+                <!-- Hidden file input -->
+                <input type="file"
+                       id="fileInput"
+                       name="file"
+                       accept=".csv,.tsv"
+                       style="display:none;"
+                       required
+                       onchange="showUploadedMessage()">
+
+                <!-- Upload status -->
+                <p id="uploadStatus"
+                   style="display:none; color:#7CFC90; font-weight:bold; margin-bottom:15px;">
+                   ✔ File uploaded
+                </p>
+
+                <!-- Buttons -->
+                <div style="margin-top:20px;">
+                    <button type="button"
+                            onclick="document.getElementById('fileInput').click();"
+                            style="padding:18px 60px; font-size:20px; margin-right:15px;">
+                        Upload
+                    </button>
+
+                    <button type="submit"
+                            style="padding:18px 60px; font-size:20px;">
+                        Analysis
+                    </button>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<!-- Script MUST be here -->
+<script>
+function showUploadedMessage() {
+    document.getElementById("uploadStatus").style.display = "block";
+}
+</script>
+
+</body>
+</html>

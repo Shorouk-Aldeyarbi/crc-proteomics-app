@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample {{ sample_id }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Sample: {{ sample_id }}</h1>
+
+    <h2>Top 30 Proteins</h2>
+    {% if protein_plot_url %}
+    <img src="data:image/png;base64,{{ protein_plot_url }}">
+    {% else %}
+    <p>No protein data available for this sample.</p>
+    {% endif %}
+    
+    <h2>Top Enriched Pathways</h2>
+    {% if pathway_plot_url %}
+    <img src="data:image/png;base64,{{ pathway_plot_url }}">
+    {% else %}
+    <p>Pathway enrichment failed or no results available.</p>
+    {% endif %}
+    
+    <br>
+    <a href="{{ url_for('analyze', filename=filename) }}"><button>Back to results</button></a>
+    <a href="{{ url_for('index') }}"><button>Upload another file</button></a>
+</div>
+</body>
+</html>

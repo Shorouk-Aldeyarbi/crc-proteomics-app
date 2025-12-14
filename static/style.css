@@ -1,0 +1,95 @@
+body {
+    background:
+        linear-gradient(rgba(10,15,40,0.75), rgba(10,15,40,0.75)),
+        url("../static/MKSH.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    text-shadow: 2px 2px 10px #000;
+    color: white;   /* ← ADD THIS */
+}
+
+h2 {
+    font-size: 28px;
+    color: white;
+    margin-top: 30px;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background-color: rgba(20,20,40,0.85); /* dark semi-transparent */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.7);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgba(255,255,255,0.95);
+    color: #000;
+    box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+table th {
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* protein-themed gradient */
+    color: white;
+    font-size: 16px;
+}
+
+table tr:nth-child(even) {
+    background-color: #e6e6e6;
+}
+
+table tr:hover {
+    background-color: #d1c4e9;
+}
+
+a {
+    color: #6a11cb; /* purple */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+button {
+    background-color: #2575fc;
+    color: white;
+    padding: 12px 25px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #1a4fcc;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.3);
+}
